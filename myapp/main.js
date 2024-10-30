@@ -36,3 +36,6 @@ app.get('/', (req, res) => {
 
 // rotta /posts
 app.get('/posts', controller.index);
+
+// assets statici
+app.use(express.static('Public'));
