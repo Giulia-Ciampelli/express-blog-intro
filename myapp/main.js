@@ -10,3 +10,22 @@
 // Spostiamo l’array dei post in un file separato da importare poi dentro il controller
 // Creare una nuova rotta con cui stampare la lista in html come ul
 // Create una pagina statica html da cui far partire una chiamata ajax per consumare il vostro enpoint json.
+
+// #region variabili importazione
+const express = require('express');
+const app = express();
+const host = 'http://localhost';
+const port = 3005;
+// #endregion variabili importazione
+
+// #region variabili globali
+// #endregion variabili globali
+
+app.listen(port, () => {
+    console.log(`App esempio su: ${host}:${port}`);
+})
+
+// test rotta '/'
+app.get('/', (req, res) => {
+    res.send('Im alive');
+})
