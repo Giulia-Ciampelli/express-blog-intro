@@ -25,7 +25,10 @@ app.listen(port, () => {
     console.log(`App esempio su: ${host}:${port}`);
 })
 
-// test rotta '/'
+// rotta '/'
 app.get('/', (req, res) => {
-    res.send('Im alive');
+    const markup = `
+    <h1>Benvenuto nel mio blog!</h1>`;
+
+    res.send(markup);
 })
