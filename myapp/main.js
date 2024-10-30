@@ -16,6 +16,7 @@ const express = require('express');
 const app = express();
 const host = 'http://localhost';
 const port = 3005;
+const controller = require('./Controllers/posts.js')
 // #endregion variabili importazione
 
 // #region variabili globali
@@ -32,3 +33,6 @@ app.get('/', (req, res) => {
 
     res.send(markup);
 })
+
+// rotta /posts
+app.get('/posts', controller.index);
