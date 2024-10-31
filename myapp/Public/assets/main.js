@@ -19,20 +19,24 @@ axios.get('http://127.0.0.1:3005/posts')
 
             // creazione markup
             const markup = `
-            <div class="card">
-                <div class="card-title">
-                    ${title}
-                </div>
-                <div class="card-img">
-                    <img src="${img}" class="api-img" alt="immagine post casuale">
-                </div>
-                <div class="card-desc">
-                    ${content}
-                </div>
-                <div class="card-tags">
-                    ${tags}
-                </div>
-            </div>`;
+            <ul>
+                <li>
+                    <div class="card">
+                        <div class="card-title">
+                            ${title}
+                        </div>
+                        <div class="card-img">
+                            <img src="${img}" class="api-img" alt="immagine post casuale">
+                        </div>
+                        <div class="card-desc">
+                            ${content}
+                        </div>
+                        <div class="card-tags">
+                            ${tags}
+                        </div>
+                    </div>
+                </li>
+            </ul>`;
 
             // assegnazione markup
             postElements += markup;
