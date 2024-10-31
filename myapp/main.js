@@ -13,8 +13,9 @@
 
 // #region variabili importazione
 const express = require('express');
+const cors = require('cors');
 const app = express();
-const host = 'http://localhost';
+const host = 'http://127.0.0.1';
 const port = 3005;
 const controller = require('./Controllers/posts.js')
 // #endregion variabili importazione
@@ -25,6 +26,9 @@ const controller = require('./Controllers/posts.js')
 app.listen(port, () => {
     console.log(`App esempio su: ${host}:${port}`);
 })
+
+// cors su tutte le rotte
+app.use(cors());
 
 // rotta '/'
 app.get('/', (req, res) => {
